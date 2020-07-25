@@ -24,10 +24,12 @@ time.sleep(5)
 cliq_driver.find_element_by_css_selector('div.msi-chat').click()
 time.sleep(2)
 count = 0 
+
+no_of_times = int(input("enter how many no.of times you want:-"))
 while True:
 	time.sleep(10)
 	count+=1
-	if count > 4:
+	if count > no_of_times:
 		break
 	else:
 		text_button = cliq_driver.find_element_by_css_selector('div.textarea').send_keys(input("enter your messege:-"))
